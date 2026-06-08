@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advay Tripathi | Coding Projects</title>
+    <meta
+      name="description"
+      content="Advay Tripathi's coding projects in AI, mobile development, and web design."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Advay Tripathi home">AT</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/hero-workspace.png"
+          alt="Modern developer workspace with a laptop, notebook, and desk setup"
+        />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Coding Projects</p>
+          <h1 id="hero-title">Advay Tripathi</h1>
+          <p class="hero-copy">
+            I am a high school student who likes building coding projects with
+            AI, mobile apps, and web design. This site shows what I am learning
+            and creating.
+          </p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="https://github.com/advay4ever" target="_blank" rel="noreferrer">GitHub Profile</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-band" aria-label="Highlights">
+        <div class="metric">
+          <strong>2 Projects</strong>
+          <span>Current coding work from my GitHub account</span>
+        </div>
+        <div class="metric">
+          <strong>AI + Web</strong>
+          <span>Learning Python, Flask, JavaScript, CSS, HTML, and APIs</span>
+        </div>
+        <div class="metric">
+          <strong>Mobile</strong>
+          <span>Practicing TypeScript with mobile-friendly projects</span>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">My Work</p>
+          <h2 id="projects-title">Coding projects I have built</h2>
+        </div>
+
+        <div class="filter-bar" aria-label="Project filters">
+          <button class="filter-button active" type="button" data-filter="all">
+            All
+          </button>
+          <button class="filter-button" type="button" data-filter="ai">
+            AI
+          </button>
+          <button class="filter-button" type="button" data-filter="mobile">
+            Mobile
+          </button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured-project" data-category="ai">
+            <div class="project-media project-media-one"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Private Repo</span>
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Groq AI</span>
+              </div>
+              <h3>Math-AI-agent</h3>
+              <p>
+                A math helper app I built for students. It solves equations
+                step by step, plots graphs, checks answers with SymPy, and
+                explains word problems using Flask, Groq AI, and KaTeX.
+              </p>
+              <dl class="repo-facts">
+                <div>
+                  <dt>Languages</dt>
+                  <dd>Python, JavaScript, CSS, HTML</dd>
+                </div>
+                <div>
+                  <dt>Last pushed</dt>
+                  <dd>June 2, 2026</dd>
+                </div>
+              </dl>
+              <a href="https://github.com/advay4ever/Math-AI-agent" target="_blank" rel="noreferrer" aria-label="Open Math-AI-agent on GitHub">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="mobile">
+            <div class="project-media project-media-two"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Public Repo</span>
+                <span>TypeScript</span>
+                <span>Mobile</span>
+              </div>
+              <h3>memory-match-mobile</h3>
+              <p>
+                A memory matching game built with TypeScript and web
+                technologies. This project helped me practice interactive UI,
+                game logic, styling, and mobile-friendly layout.
+              </p>
+              <dl class="repo-facts">
+                <div>
+                  <dt>Languages</dt>
+                  <dd>TypeScript, CSS, JavaScript, Python</dd>
+                </div>
+                <div>
+                  <dt>Last pushed</dt>
+                  <dd>February 2, 2026</dd>
+                </div>
+              </dl>
+              <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer" aria-label="Open memory-match-mobile on GitHub">View on GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section split-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">What I Am Learning</p>
+          <h2 id="skills-title">Skills</h2>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-panel">
+            <h3>AI and Backend</h3>
+            <p>Python, Flask, SymPy, Groq AI, APIs, and app logic</p>
+          </div>
+          <div class="skill-panel">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, TypeScript, responsive UI, and KaTeX</p>
+          </div>
+          <div class="skill-panel">
+            <h3>Workflow</h3>
+            <p>GitHub, project organization, debugging, and improving projects over time</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">I like learning by building real projects.</h2>
+          <p>
+            I am still learning, but I like taking ideas and turning them into
+            working apps. My projects show my progress with AI tools, mobile
+            interaction, and web design.
+          </p>
+        </div>
+        <div class="timeline" aria-label="Project focus areas">
+          <div>
+            <span>01</span>
+            <p>Start with a useful or fun idea, like an AI tutor or game mechanic.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <p>Make the interface clear so another person can try it.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <p>Use GitHub to save my work and improve it over time.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Explore</p>
+          <h2 id="contact-title">See more of my code</h2>
+          <p>
+            My GitHub has the code for my public projects. As I build more
+            projects, this site can grow with them.
+          </p>
+          <div class="contact-links" aria-label="Profile links">
+            <a href="https://github.com/advay4ever" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer">Memory Match</a>
+          </div>
+        </div>
+        <div class="student-note">
+          <h3>Current focus</h3>
+          <p>
+            I am building my skills through school, self-directed projects, and
+            experiments with AI, games, and web apps.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Advay Tripathi. Built with care.</p>
+      <div>
+        <a href="https://github.com/advay4ever" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer">Memory Match</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
