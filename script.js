@@ -7,6 +7,7 @@ filterButtons.forEach((button) => {
 
     filterButtons.forEach((item) => {
       item.classList.toggle("active", item === button);
+      item.setAttribute("aria-pressed", String(item === button));
     });
 
     projectCards.forEach((card) => {

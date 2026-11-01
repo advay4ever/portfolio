@@ -14,16 +14,26 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Advay Tripathi home">AT</a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+        </nav>
+        <div class="theme-control">
+          <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-label="Dark theme" aria-checked="false" title="Switch to dark theme">
+            <img class="theme-icon theme-icon-moon" src="assets/moon.svg" alt="" width="20" height="20" aria-hidden="true" />
+            <img class="theme-icon theme-icon-sun" src="assets/sun.svg" alt="" width="20" height="20" aria-hidden="true" />
+          </button>
+          <span class="theme-tooltip" id="theme-tooltip" role="tooltip">Switch to dark theme</span>
+        </div>
+      </div>
     </header>
 
     <main id="top">
@@ -38,8 +48,8 @@
           <p class="eyebrow">Coding Projects</p>
           <h1 id="hero-title">Advay Tripathi</h1>
           <p class="hero-copy">
-            I like building coding projects with AI, mobile apps, and web
-            design. This site shows what I am learning and creating.
+            I build AI learning tools and interactive web apps with Python,
+            TypeScript, and a curiosity for how things work.
           </p>
           <div class="hero-actions" aria-label="Project links">
             <a class="button primary" href="#projects">View Projects</a>
@@ -66,36 +76,43 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <p class="eyebrow">My Work</p>
-          <h2 id="projects-title">Coding projects I have built</h2>
+          <h2 id="projects-title">AI tutoring and interactive games</h2>
         </div>
 
         <div class="filter-bar" aria-label="Project filters">
-          <button class="filter-button active" type="button" data-filter="all">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">
             All
           </button>
-          <button class="filter-button" type="button" data-filter="ai">
+          <button class="filter-button" type="button" data-filter="ai" aria-pressed="false" aria-controls="project-grid">
             AI
           </button>
-          <button class="filter-button" type="button" data-filter="mobile">
+          <button class="filter-button" type="button" data-filter="mobile" aria-pressed="false" aria-controls="project-grid">
             Mobile
           </button>
         </div>
 
-        <div class="project-grid">
+        <div class="project-grid" id="project-grid">
           <article class="project-card featured-project" data-category="ai">
-            <div class="project-media project-media-one"></div>
+            <figure class="project-preview">
+              <a class="project-media" href="assets/delphic-ai-screenshot.png" target="_blank" rel="noreferrer" aria-label="Open full-size Delphic AI graph screenshot">
+                <img src="assets/delphic-ai-screenshot.png" alt="Delphic AI math workspace displaying an interactive parabola with graph controls" width="1440" height="1000" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Math workspace &middot; Interactive function graph</figcaption>
+            </figure>
             <div class="project-body">
               <div class="project-meta">
-                <span>Private Repo</span>
                 <span>Python</span>
                 <span>Flask</span>
                 <span>Groq AI</span>
               </div>
-              <h3>Math-AI-agent</h3>
+              <div class="project-title">
+                <img class="project-logo" src="assets/delphic-ai-logo.png" alt="Delphic AI logo" width="56" height="50" loading="lazy" decoding="async" />
+                <h3>Delphic AI: Math and Science Tutor</h3>
+              </div>
               <p>
-                A math helper app I built for students. It solves equations
-                step by step, plots graphs, checks answers with SymPy, and
-                explains word problems using Flask, Groq AI, and KaTeX.
+                A student learning app with guided explanations, interactive
+                graphs, study notes, and work checking. A Flask backend connects
+                AI responses with symbolic math tools and a browser-based workspace.
               </p>
               <dl class="repo-facts">
                 <div>
@@ -103,27 +120,35 @@
                   <dd>Python, JavaScript, CSS, HTML</dd>
                 </div>
                 <div>
-                  <dt>Last pushed</dt>
-                  <dd>June 2, 2026</dd>
+                  <dt>Python in practice</dt>
+                  <dd>Flask routes, AI APIs, SymPy, SQLite, and pytest</dd>
                 </div>
               </dl>
-              <a href="https://github.com/advay4ever/Math-AI-agent" target="_blank" rel="noreferrer" aria-label="Open Math-AI-agent on GitHub">View on GitHub</a>
+              <a href="https://github.com/advay4ever/Delphic-AI" target="_blank" rel="noreferrer" aria-label="Open Delphic AI on GitHub">View on GitHub</a>
             </div>
           </article>
 
           <article class="project-card" data-category="mobile">
-            <div class="project-media project-media-two"></div>
+            <figure class="project-preview">
+              <a class="project-media" href="assets/memory-match-showcase.png" target="_blank" rel="noreferrer" aria-label="Open full-size Memory Match tablet and phone preview">
+                <img src="assets/memory-match-showcase.png" alt="Memory Match displayed on a tablet and phone, showing the listening instructions and sound recall selection screen" width="1672" height="941" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>RecallQ &middot; Tablet and phone experience</figcaption>
+            </figure>
             <div class="project-body">
               <div class="project-meta">
-                <span>Public Repo</span>
                 <span>TypeScript</span>
+                <span>React</span>
                 <span>Mobile</span>
               </div>
-              <h3>memory-match-mobile</h3>
+              <div class="project-title">
+                <img class="project-logo recallq-logo" src="assets/recallq-logo.png" alt="RecallQ logo" width="56" height="50" loading="lazy" decoding="async" />
+                <h3>RecallQ: Audio Recall Video Game</h3>
+              </div>
               <p>
-                A memory matching game built with TypeScript and web
-                technologies. This project helped me practice interactive UI,
-                game logic, styling, and mobile-friendly layout.
+                A mobile-friendly game where players listen to sounds, wait,
+                and identify what they heard. Built with React and TypeScript
+                to practice timed game states, audio playback, and session results.
               </p>
               <dl class="repo-facts">
                 <div>
@@ -131,11 +156,11 @@
                   <dd>TypeScript, CSS, JavaScript, Python</dd>
                 </div>
                 <div>
-                  <dt>Last pushed</dt>
-                  <dd>February 2, 2026</dd>
+                  <dt>What I practiced</dt>
+                  <dd>React state, audio interaction, and responsive layouts</dd>
                 </div>
               </dl>
-              <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer" aria-label="Open memory-match-mobile on GitHub">View on GitHub</a>
+              <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer" aria-label="Open RecallQ's memory-match-mobile repository on GitHub">View on GitHub</a>
             </div>
           </article>
 
@@ -145,20 +170,28 @@
       <section class="section split-section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading">
           <p class="eyebrow">What I Am Learning</p>
-          <h2 id="skills-title">Skills</h2>
+          <h2 id="skills-title">Technical skills I am putting to work</h2>
         </div>
         <div class="skill-groups">
           <div class="skill-panel">
-            <h3>AI and Backend</h3>
-            <p>Python, Flask, SymPy, Groq AI, APIs, and app logic</p>
+            <h3>Python: Backend, AI, and Data</h3>
+            <dl class="skill-details">
+              <div><dt>Web development</dt><dd>Flask routes, JSON endpoints, request validation, and sessions</dd></div>
+              <div><dt>AI integration</dt><dd>API clients, streaming responses, prompts, and error handling</dd></div>
+              <div><dt>Symbolic math</dt><dd>SymPy equation solving, differentiation, and integration</dd></div>
+              <div><dt>Data storage</dt><dd>SQLite queries and persistent chat history</dd></div>
+              <div><dt>Testing</dt><dd>pytest unit tests, fixtures, and Flask test clients</dd></div>
+            </dl>
           </div>
           <div class="skill-panel">
-            <h3>Frontend</h3>
-            <p>HTML, CSS, JavaScript, TypeScript, responsive UI, and KaTeX</p>
+            <h3>Frontend: Interfaces and Interaction</h3>
+            <p>HTML and CSS for responsive layouts; JavaScript and TypeScript
+              for app behavior; React for component state; KaTeX for math rendering.</p>
           </div>
           <div class="skill-panel">
-            <h3>Workflow</h3>
-            <p>GitHub, project organization, debugging, and improving projects over time</p>
+            <h3>Workflow: Build, Test, and Improve</h3>
+            <p>Git and GitHub for version control, browser debugging,
+              Playwright checks, project documentation, and iterative improvements.</p>
           </div>
         </div>
       </section>
@@ -166,7 +199,7 @@
       <section class="section about-section" id="about" aria-labelledby="about-title">
         <div class="about-copy">
           <p class="eyebrow">About</p>
-          <h2 id="about-title">I like learning by building real projects.</h2>
+          <h2 id="about-title">Learning through working apps</h2>
           <p>
             I am still learning, but I like taking ideas and turning them into
             working apps. My projects show my progress with AI tools, mobile
@@ -199,7 +232,7 @@
           </p>
           <div class="explore-links" aria-label="Profile links">
             <a href="https://github.com/advay4ever" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer">Memory Match</a>
+            <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer">RecallQ</a>
           </div>
         </div>
         <div class="student-note">
@@ -216,7 +249,7 @@
       <p>© 2026 Advay Tripathi. Built with care.</p>
       <div>
         <a href="https://github.com/advay4ever" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer">Memory Match</a>
+        <a href="https://github.com/advay4ever/memory-match-mobile" target="_blank" rel="noreferrer">RecallQ</a>
       </div>
     </footer>
 
